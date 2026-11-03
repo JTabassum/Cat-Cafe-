@@ -1,0 +1,93 @@
+c1 = "Calico"
+c2 = "Siamese"
+c3 = "Ragdoll"
+
+t1 = "Hoodie"
+t2 = "Apron"
+t3 = "T-shirt"
+
+b1 = "Jeans"
+b2 = "Skirt"
+b3 = "Shorts"
+
+breed: str = " "
+
+
+class Character:
+    def __init__(self, name, breed, top, bottoms, x=0, y=0):
+        self.name = name
+        self.breed = breed
+        self.top = top
+        self.bottoms = bottoms
+        self.x = x
+        self.y = y
+
+    def display(self):
+        print(f"\nYou are a {self.breed} cat named {self.name}!")
+        print(f"You are wearing a {self.top} with {self.bottoms}.\n")
+
+
+def choose():
+    player = int(input(f"Choose your character: \n1: {c1}\n2: {c2}\n3: {c3}\n(Enter 1, 2, or 3)\n"))
+    return confirm(player)
+
+
+def confirm(player):
+    global breed
+
+    if player == 1:
+        decide = input(f"Do you want to be the {c1} cat?\n")
+        if decide in ["Y", "y", "yes", "Yes"]:
+            breed = c1
+            return nameit(player)
+        else:
+            return choose() 
+
+    elif player == 2:
+        decide = input(f"Do you want to be the {c2} cat?\n")
+        if decide in ["Y", "y", "yes", "Yes"]:
+            breed = c2
+            return nameit(player)
+        else:
+            return choose() 
+
+    elif player == 3:
+        decide = input(f"Do you want to be the {c3} cat?\n")
+        if decide in ["Y", "y", "yes", "Yes"]:
+            breed = c3
+            return nameit(player)
+        else:
+            return choose() 
+    else:
+        print("Please enter 1, 2, or 3.")
+        return choose()  
+
+
+def nameit(player):
+    print("Let's name your character!")
+    name = input("What do you want to name your cat?\n")
+    return dressup(player, name)  
+
+
+def dressup(player, name):
+    print("\nLet's dress up your cat!")
+
+    print(f"1: {t1}\n2: {t2}\n3: {t3}")
+    choice = int(input("What top do you want to wear?\n"))
+    if choice == 1:
+        top = t1
+    elif choice == 2:
+        top = t2
+    else:
+        top = t3
+
+    print(f"1: {b1}\n2: {b2}\n3: {b3}")
+    choice = int(input("What bottoms do you want to wear?\n"))
+    if choice == 1:
+        bottoms = b1
+    elif choice == 2:
+        bottoms = b2
+    else:
+        bottoms = b3
+
+    return Character(name, breed, top, bottoms)
