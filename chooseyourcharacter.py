@@ -1,6 +1,6 @@
 c1 = "Calico"
 c2 = "Siamese"
-c3 = "Ragdoll"
+c3 = "Ginger"
 
 t1 = "Hoodie"
 t2 = "Apron"

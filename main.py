@@ -1,11 +1,13 @@
-# main.py
-
 from chooseyourcharacter import choose
 from motion_class import Motion
 
 
 def start():
-    cat = choose()        
+    cat = choose() 
+    
+    with open("Character.txt", "w") as f:
+        f.write(f"you are a {cat.breed} named {cat.name} wearing a {cat.top} and a {cat.bottoms}. slay")       
+    
     cat.display()         
     move = Motion(cat)    
 

@@ -15,11 +15,15 @@ class Motion:
             self.character.x = 0
             self.character.y = 0
     
-    def left(self):
-        self.character.x -= 1
+    def left(self, steps=1):
+            if steps <= 0:
+                return
+            self.character.x -= steps
     
-    def right(self):
-        self.character.x += 1
+    def right(self, steps=1):
+        if steps <= 0:
+            return
+        self.character.x += steps
     
     def jump(self):
         self.character.y += 5
