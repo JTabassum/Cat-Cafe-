@@ -4,7 +4,7 @@ import tkinter as tk
 def move(root, next):
     root.title("Move Your Character!")
 
-    label = tk.Label(root, text = "Click the buttons! ", font = ("Times New Roman", 20))
+    label = tk.Label(root, text = "Move your Character! ", font = ("Times New Roman", 20))
 
     
     def up():
