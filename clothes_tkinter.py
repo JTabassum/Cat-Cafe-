@@ -41,13 +41,13 @@ def clothes(root, on_outfit_ready):
         choose_bot()
 
     def finish_outfit():
+        label.grid_remove()
         yes_to_bot.grid_remove()
         no_to_bot.grid_remove()
         jeans_button.grid_remove()
         shorts_button.grid_remove()
         skirt_button.grid_remove()
-        cat_label = tk.Label(root, text="=^._.^= ∫")
-        on_outfit_ready(cat_label)
+        on_outfit_ready(f"{selected['top']} and {selected['bottom']}")
 
     hoodie_button = tk.Button(root, text="Hoodie", command=lambda: select_top("Hoodie"))
     apron_button = tk.Button(root, text="Apron", command=lambda: select_top("Apron"))
