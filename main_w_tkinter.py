@@ -5,9 +5,11 @@ from motion_tkinter import move
 
 root = tk.Tk()
 root.title("Main")
+
+def show(animal, character_name):
+    #display text of what ur wearing
     
-def show():
-    clothes(root, lambda finalcat: move(root, finalcat))
+    move(root, animal, character_name)
 
 create(root, show)
 

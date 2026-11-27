@@ -1,6 +1,5 @@
 import tkinter as tk
 
-
 def clothes(root, on_outfit_ready):
     root.title("Choose Your Clothes!")
 
@@ -47,8 +46,8 @@ def clothes(root, on_outfit_ready):
         jeans_button.grid_remove()
         shorts_button.grid_remove()
         skirt_button.grid_remove()
-        finalcat = "=^._.^= ∫"
-        on_outfit_ready(finalcat)
+        cat_label = tk.Label(root, text="=^._.^= ∫")
+        on_outfit_ready(cat_label)
 
     hoodie_button = tk.Button(root, text="Hoodie", command=lambda: select_top("Hoodie"))
     apron_button = tk.Button(root, text="Apron", command=lambda: select_top("Apron"))
@@ -60,6 +59,3 @@ def clothes(root, on_outfit_ready):
     hoodie_button.grid(row=2, column=0)
     apron_button.grid(row=2, column=1)
     shirt_button.grid(row=2, column=2)
-    
-
-    
