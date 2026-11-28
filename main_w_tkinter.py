@@ -1,15 +1,15 @@
 import tkinter as tk
 from cyc_tkinter import create
 from clothes_tkinter import clothes
-from motion_tkinter import move
+from display_tkinter import display
 
 root = tk.Tk()
 root.title("Main")
+root.geometry("280x343")
 
 def show(animal, character_name):
     def show_outfit(outfit):
-        move(root, animal, character_name)
-        tk.Label(root, text=f"{character_name} is wearing {outfit}.", font=("Times New Roman", 16)).grid(row=3, column=0, columnspan=3, pady=10)
+        display(root, animal, character_name, outfit)
 
     clothes(root, show_outfit)
 

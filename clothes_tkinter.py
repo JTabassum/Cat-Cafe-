@@ -2,9 +2,10 @@ import tkinter as tk
 
 def clothes(root, on_outfit_ready):
     root.title("Choose Your Clothes!")
+    root.geometry("280x343")
 
     selected = {"top": None, "bottom": None}
-    label = tk.Label(root, text="Choose your Top: ", font=("Times New Roman", 20))
+    label = tk.Label(root, text="Choose your Top: ", font=("Times New Roman", 15))
 
     def sure_ag():
         label.config(text="Are you sure?")
